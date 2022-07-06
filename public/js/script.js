@@ -59,7 +59,7 @@ function loadDataFromStorage(keyword = '') {
     for (const book of data) {
       console.log(keyword);
       console.log(book.title.includes(keyword));
-      if (book.title.includes(keyword)) {
+      if (book.title.toLowerCase().includes(keyword.toLowerCase())) {
         books.push(book);
       }
     }
